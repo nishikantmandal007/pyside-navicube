@@ -6,6 +6,10 @@ sort: 1
 
 # NavCube
 
+<p align="center">
+  <img src="{{ '/assets/logo.svg' | relative_url }}" alt="NavCube logo" width="160"/>
+</p>
+
 NavCube is a 3D orientation cube widget for PySide6. Drop it into any 3D viewport — OCC, VTK, custom OpenGL, whatever you're using — and it just works. No renderer dependency, no shared OpenGL context, no lifecycle headaches.
 
 [Get Started]({{ '/getting-started' | relative_url }}){: .btn }
@@ -155,6 +159,14 @@ cube.push_camera(dx, dy, dz, ux, uy, uz)
 | [Connectors]({{ '/connectors' | relative_url }}) | OCC, VTK, and how to write your own |
 | [API Reference]({{ '/api-reference' | relative_url }}) | Classes, methods, and signals |
 | [Changelog]({{ '/changelog' | relative_url }}) | What changed and when |
+
+---
+
+## Acknowledgements
+
+NavCube is directly inspired by [FreeCAD's NaviCube](https://wiki.freecad.org/Navigation_Cube) — one of the best orientation controls in any open-source CAD application. If you haven't tried FreeCAD, you should.
+
+The FreeCAD team's work on their NaviCube shaped nearly every design decision here: the face layout, the corner and edge hit regions, the click-to-snap behaviour, and the overall feel. NavCube exists because their implementation set such a high bar. Huge thanks to the entire FreeCAD community for building and maintaining it.
 
 ---
 
