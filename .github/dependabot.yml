@@ -1,0 +1,28 @@
+version: 2
+
+updates:
+  # Keep GitHub Actions up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencies"
+
+  # Keep Python dependencies up to date
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "chore"
+    labels:
+      - "dependencies"
+    ignore:
+      # PySide6 major bumps need manual review
+      - dependency-name: "PySide6"
+        update-types: ["version-update:semver-major"]

@@ -1,0 +1,55 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # ── 1. release-please ────────────────────────────────────────────────
+  # Watches commits on main, maintains a "Release PR" that accumulates
+  # changes, bumps the version in pyproject.toml, and writes CHANGELOG.md.
+  # When that PR is merged, it creates the GitHub Release + tag.
+  release-please:
+    name: Release Please
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    outputs:
+      release_created: ${{ steps.rp.outputs.release_created }}
+      tag_name: ${{ steps.rp.outputs.tag_name }}
+      version: ${{ steps.rp.outputs.version }}
+
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: rp
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: python
+
+  # ── 2. publish ───────────────────────────────────────────────────────
+  # Only runs when release-please actually created a release (i.e. the
+  # Release PR was merged — not on every push to main).
+  publish:
+    name: Publish to PyPI
+    needs: release-please
+    if: needs.release-please.outputs.release_created == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build distribution
+        run: |
+          pip install build
+          python -m build
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}

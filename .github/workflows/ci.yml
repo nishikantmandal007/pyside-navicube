@@ -2,10 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [main, master]
-    tags: ["v*"]
+    branches: [main, dev]
   pull_request:
-    branches: [main, master]
+    branches: [main, dev]
 
 jobs:
   test:
@@ -51,50 +50,6 @@ jobs:
         env:
           QT_QPA_PLATFORM: offscreen
         run: pytest tests/ -v
-
-  release:
-    name: Create GitHub Release
-    needs: test
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
-    permissions:
-      contents: write
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Create release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.ref_name }}
-          name: ${{ github.ref_name }}
-          generate_release_notes: true
-          draft: false
-          prerelease: ${{ contains(github.ref_name, '-') }}
-
-  publish:
-    name: Publish to PyPI
-    needs: release
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Build distribution
-        run: |
-          pip install build
-          python -m build
-
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
 
   docs:
     name: Build Documentation
