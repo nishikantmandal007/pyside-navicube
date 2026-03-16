@@ -1,9 +1,3 @@
----
-layout: default
-title: API Reference
-sort: 6
----
-
 # API Reference
 
 Everything public in NavCube — classes, methods, signals, and constants.
@@ -155,7 +149,7 @@ Internally this: stores the new style, recomputes derived values, clears the fon
 _WORLD_ROT: np.ndarray = np.eye(3)
 ```
 
-A 3×3 rotation matrix that maps NavCube's internal Z-up space to your application's world space. Override it as a class attribute in a subclass to support Y-up or any other coordinate convention. See [Coordinate Systems](coordinate-systems) for the full explanation.
+A 3×3 rotation matrix that maps NavCube's internal Z-up space to your application's world space. Override it as a class attribute in a subclass to support Y-up or any other coordinate convention. See [Coordinate Systems](coordinate-systems.md) for the full explanation.
 
 ### Properties
 
@@ -175,7 +169,7 @@ The ID of the currently hovered element, or `None` if nothing is hovered. Face I
 from navcube import NavCubeStyle
 ```
 
-A Python `dataclass` with every visual and behavioral setting for the widget. See [Style Reference](style-reference) for exhaustive documentation of each field.
+A Python `dataclass` with every visual and behavioral setting for the widget. See [Style Reference](style-reference.md) for exhaustive documentation of each field.
 
 ### Constructor
 

@@ -1,0 +1,2121 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A 3D orientation cube widget for PySide6 — renderer-agnostic, drop-in ready">
+      
+      
+      
+        <link rel="canonical" href="https://nishikantmandal007.github.io/navcube/api-reference/">
+      
+      
+        <link rel="prev" href="../examples/">
+      
+      
+        <link rel="next" href="../changelog/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>API Reference - NavCube</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NavCube" class="md-header__button md-logo" aria-label="NavCube" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NavCube
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nishikantmandal007/navcube" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nishikantmandal007/navcube
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../connectors/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Connectors
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../style-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Style Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../coordinate-systems/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Coordinate Systems
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Examples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Changelog
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NavCube" class="md-nav__button md-logo" aria-label="NavCube" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    NavCube
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nishikantmandal007/navcube" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nishikantmandal007/navcube
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connectors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../style-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coordinate Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navcubeoverlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NavCubeOverlay
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NavCubeOverlay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vieworientationrequested" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        viewOrientationRequested
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#push_camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        push_camera
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_home" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_home
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_interaction_active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_interaction_active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_style
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_world_rot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _WORLD_ROT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hovered_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hovered_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navcubestyle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NavCubeStyle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NavCubeStyle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#occnavcubesync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OCCNavCubeSync
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OCCNavCubeSync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_interaction_active_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_interaction_active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        teardown
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class constants
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vtknavcubesync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VTKNavCubeSync
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VTKNavCubeSync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_interaction_active_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_interaction_active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teardown_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        teardown
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#face-and-control-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Face and control IDs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Face and control IDs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-faces-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main faces (6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-faces-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge faces (12)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corner-faces-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corner faces (8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-buttons-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control buttons (8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navcubeoverlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NavCubeOverlay
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NavCubeOverlay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vieworientationrequested" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        viewOrientationRequested
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#push_camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        push_camera
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_home" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_home
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_interaction_active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_interaction_active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_style
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_world_rot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _WORLD_ROT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hovered_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hovered_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navcubestyle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NavCubeStyle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NavCubeStyle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#occnavcubesync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OCCNavCubeSync
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OCCNavCubeSync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_interaction_active_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_interaction_active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        teardown
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class constants
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vtknavcubesync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VTKNavCubeSync
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VTKNavCubeSync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_interaction_active_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_interaction_active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teardown_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        teardown
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#face-and-control-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Face and control IDs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Face and control IDs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-faces-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main faces (6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-faces-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge faces (12)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corner-faces-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corner faces (8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-buttons-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control buttons (8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
+<p>Everything public in NavCube — classes, methods, signals, and constants.</p>
+<hr />
+<h2 id="navcubeoverlay"><code>NavCubeOverlay</code><a class="headerlink" href="#navcubeoverlay" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">navcube</span> <span class="kn">import</span> <span class="n">NavCubeOverlay</span>
+</span></code></pre></div>
+<p>A PySide6 <code>QWidget</code> that renders a FreeCAD-style NaviCube using <code>QPainter</code>. It communicates with your 3D renderer exclusively through <code>push_camera()</code> (input) and <code>viewOrientationRequested</code> (output). No renderer imports, no shared context.</p>
+<h3 id="constructor">Constructor<a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">NavCubeOverlay</span><span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="o">*</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">overlay</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">style</span><span class="p">:</span> <span class="n">NavCubeStyle</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">)</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>parent</code></td>
+<td style="text-align: left;"><code>QWidget \| None</code></td>
+<td style="text-align: left;"><code>None</code></td>
+<td style="text-align: left;">Qt parent widget. In overlay mode this should be your 3D viewport widget.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>overlay</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;"><code>True</code></td>
+<td style="text-align: left;"><code>True</code> creates a transparent floating tool window. <code>False</code> creates a plain opaque QWidget you can drop into any layout or dock.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>style</code></td>
+<td style="text-align: left;"><code>NavCubeStyle \| None</code></td>
+<td style="text-align: left;"><code>None</code></td>
+<td style="text-align: left;">Visual and behavioral settings. Defaults to <code>NavCubeStyle()</code> if not provided.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="signals">Signals<a class="headerlink" href="#signals" title="Permanent link">&para;</a></h3>
+<h4 id="vieworientationrequested"><code>viewOrientationRequested</code><a class="headerlink" href="#vieworientationrequested" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">viewOrientationRequested</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Fires when the user clicks a cube face, edge, corner, or control button. Also fires on every animation tick during the resulting camera transition, so your renderer can follow the smooth movement.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>dx</code></td>
+<td style="text-align: left;">Outward camera direction X (scene center → eye)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dy</code></td>
+<td style="text-align: left;">Outward camera direction Y</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dz</code></td>
+<td style="text-align: left;">Outward camera direction Z</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ux</code></td>
+<td style="text-align: left;">Camera up vector X</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uy</code></td>
+<td style="text-align: left;">Camera up vector Y</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uz</code></td>
+<td style="text-align: left;">Camera up vector Z</td>
+</tr>
+</tbody>
+</table>
+<p>The direction is in your application's world space (after <code>_WORLD_ROT</code> is applied). It's ready for OCC <code>SetProj()</code> or equivalent — no sign flip needed on your end.</p>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
+<h4 id="push_camera"><code>push_camera</code><a class="headerlink" href="#push_camera" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nd">@Slot</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">def</span> <span class="nf">push_camera</span><span class="p">(</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="bp">self</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">dx</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dy</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dz</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">ux</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">uy</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">uz</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>Sync the cube with your renderer's current camera state. Call this whenever your camera moves.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>dx</code></td>
+<td style="text-align: left;">Inward camera direction X (eye → scene)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dy</code></td>
+<td style="text-align: left;">Inward camera direction Y</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dz</code></td>
+<td style="text-align: left;">Inward camera direction Z</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ux</code></td>
+<td style="text-align: left;">Camera up vector X</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uy</code></td>
+<td style="text-align: left;">Camera up vector Y</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uz</code></td>
+<td style="text-align: left;">Camera up vector Z</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What happens internally:</strong>
+- During a face-click animation, the push is silently ignored (unless interaction is active, in which case the animation cancels).
+- During active interaction (<code>set_interaction_active(True)</code>), the push is smoothed via quaternion SLERP (alpha 0.65).
+- Otherwise, the camera state is applied directly.
+- Must be called from the Qt main thread.</p>
+<p><strong>If your render loop runs on a worker thread</strong>, post back using:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">QMetaObject</span><span class="o">.</span><span class="n">invokeMethod</span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">cube</span><span class="p">,</span> <span class="s2">&quot;push_camera&quot;</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">QueuedConnection</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">Q_ARG</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">dx</span><span class="p">),</span> <span class="n">Q_ARG</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">dy</span><span class="p">),</span> <span class="n">Q_ARG</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">dz</span><span class="p">),</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">Q_ARG</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">ux</span><span class="p">),</span> <span class="n">Q_ARG</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">uy</span><span class="p">),</span> <span class="n">Q_ARG</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">uz</span><span class="p">),</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="set_home"><code>set_home</code><a class="headerlink" href="#set_home" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">set_home</span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="bp">self</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">dx</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dy</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dz</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">ux</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">uy</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">uz</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>Set the orientation that the Home button snaps back to.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>dx</code></td>
+<td style="text-align: left;">Inward camera direction X (same convention as <code>push_camera</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dy</code></td>
+<td style="text-align: left;">Inward camera direction Y</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dz</code></td>
+<td style="text-align: left;">Inward camera direction Z</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ux</code></td>
+<td style="text-align: left;">Up vector X</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uy</code></td>
+<td style="text-align: left;">Up vector Y</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uz</code></td>
+<td style="text-align: left;">Up vector Z</td>
+</tr>
+</tbody>
+</table>
+<p>The default home is an ISO view expressed in the current <code>_WORLD_ROT</code> coordinate system. Override this once after construction (or after loading user preferences) if you want a different starting orientation.</p>
+<h4 id="set_interaction_active"><code>set_interaction_active</code><a class="headerlink" href="#set_interaction_active" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">set_interaction_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">active</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>Tell the cube whether the user is actively dragging the camera.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>active</code></td>
+<td style="text-align: left;"><code>True</code> on mouse press, <code>False</code> on mouse release</td>
+</tr>
+</tbody>
+</table>
+<p>While active, <code>push_camera()</code> applies SLERP smoothing (alpha 0.65, ~8 ms effective visual lag) to absorb momentary renderer jitter — particularly OCC's up-vector flicker near gimbal-lock poles.</p>
+<h4 id="set_style"><code>set_style</code><a class="headerlink" href="#set_style" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">set_style</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">NavCubeStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>Swap the current style at runtime. Triggers a full rebuild and repaint.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>style</code></td>
+<td style="text-align: left;">A <code>NavCubeStyle</code> instance</td>
+</tr>
+</tbody>
+</table>
+<p>Internally this: stores the new style, recomputes derived values, clears the font cache, rebuilds face geometry, recalculates DPI scaling and widget size, updates the timer interval, and forces a repaint. Safe to call at any point.</p>
+<h3 id="class-attributes">Class attributes<a class="headerlink" href="#class-attributes" title="Permanent link">&para;</a></h3>
+<h4 id="_world_rot"><code>_WORLD_ROT</code><a class="headerlink" href="#_world_rot" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">_WORLD_ROT</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></code></pre></div>
+<p>A 3×3 rotation matrix that maps NavCube's internal Z-up space to your application's world space. Override it as a class attribute in a subclass to support Y-up or any other coordinate convention. See <a href="../coordinate-systems/">Coordinate Systems</a> for the full explanation.</p>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<h4 id="hovered_id"><code>hovered_id</code><a class="headerlink" href="#hovered_id" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">hovered_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>The ID of the currently hovered element, or <code>None</code> if nothing is hovered. Face IDs: <code>TOP</code>, <code>FRONT</code>, <code>LEFT</code>, <code>BACK</code>, <code>RIGHT</code>, <code>BOTTOM</code>, <code>FRONT_TOP</code>, <code>FTR</code>, etc. Control IDs: <code>ArrowNorth</code>, <code>ArrowSouth</code>, <code>ArrowEast</code>, <code>ArrowWest</code>, <code>ArrowLeft</code>, <code>ArrowRight</code>, <code>ViewMenu</code>, <code>DotBackside</code>.</p>
+<hr />
+<h2 id="navcubestyle"><code>NavCubeStyle</code><a class="headerlink" href="#navcubestyle" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">navcube</span> <span class="kn">import</span> <span class="n">NavCubeStyle</span>
+</span></code></pre></div>
+<p>A Python <code>dataclass</code> with every visual and behavioral setting for the widget. See <a href="../style-reference/">Style Reference</a> for exhaustive documentation of each field.</p>
+<h3 id="constructor_1">Constructor<a class="headerlink" href="#constructor_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">NavCubeStyle</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></code></pre></div>
+<p>All fields have defaults. Pass only what you want to change:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># All defaults</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">()</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Customize a few fields</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">theme</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="p">,</span> <span class="n">animation_ms</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="fields-summary">Fields summary<a class="headerlink" href="#fields-summary" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Geometry</td>
+<td style="text-align: left;"><code>size</code>, <code>padding</code>, <code>scale</code>, <code>chamfer</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Animation</td>
+<td style="text-align: left;"><code>animation_ms</code>, <code>tick_ms</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Thresholds</td>
+<td style="text-align: left;"><code>visibility_threshold</code>, <code>orbit_step_deg</code>, <code>sync_epsilon</code>, <code>inactive_opacity</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Lighting</td>
+<td style="text-align: left;"><code>light_direction</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Theme</td>
+<td style="text-align: left;"><code>theme</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Light colors</td>
+<td style="text-align: left;"><code>face_color</code>, <code>edge_color</code>, <code>corner_color</code>, <code>text_color</code>, <code>border_color</code>, <code>border_secondary_color</code>, <code>control_color</code>, <code>control_rim_color</code>, <code>hover_color</code>, <code>hover_text_color</code>, <code>dot_color</code>, <code>shadow_color</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Dark colors</td>
+<td style="text-align: left;"><code>face_color_dark</code>, <code>edge_color_dark</code>, <code>corner_color_dark</code>, <code>text_color_dark</code>, <code>border_color_dark</code>, <code>border_secondary_color_dark</code>, <code>control_color_dark</code>, <code>control_rim_color_dark</code>, <code>hover_color_dark</code>, <code>hover_text_color_dark</code>, <code>dot_color_dark</code>, <code>shadow_color_dark</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Font</td>
+<td style="text-align: left;"><code>font_family</code>, <code>font_fallback</code>, <code>font_weight</code>, <code>label_max_width_ratio</code>, <code>label_max_height_ratio</code>, <code>min_font_size</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Labels</td>
+<td style="text-align: left;"><code>labels</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Controls</td>
+<td style="text-align: left;"><code>show_controls</code>, <code>show_gizmo</code>, <code>gizmo_x_color</code>, <code>gizmo_y_color</code>, <code>gizmo_z_color</code>, <code>gizmo_font_size</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Borders</td>
+<td style="text-align: left;"><code>border_width_main</code>, <code>border_width_secondary</code>, <code>control_border_width</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Shadow</td>
+<td style="text-align: left;"><code>shadow_offset_x</code>, <code>shadow_offset_y</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="occnavcubesync"><code>OCCNavCubeSync</code><a class="headerlink" href="#occnavcubesync" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">navcube.connectors.occ</span> <span class="kn">import</span> <span class="n">OCCNavCubeSync</span>
+</span></code></pre></div>
+<p>Bridges an OCC <code>V3d_View</code> with a <code>NavCubeOverlay</code>. It handles camera polling, signal wiring, interaction state, and clean teardown — so you don't have to.</p>
+<h3 id="constructor_2">Constructor<a class="headerlink" href="#constructor_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">OCCNavCubeSync</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">navicube</span><span class="p">)</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>view</code></td>
+<td style="text-align: left;"><code>V3d_View</code></td>
+<td style="text-align: left;">An initialized OCC V3d_View instance</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>navicube</code></td>
+<td style="text-align: left;"><code>NavCubeOverlay</code></td>
+<td style="text-align: left;">The cube widget to sync</td>
+</tr>
+</tbody>
+</table>
+<p>Polling starts immediately on construction.</p>
+<h3 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h3>
+<h4 id="set_interaction_active_1"><code>set_interaction_active</code><a class="headerlink" href="#set_interaction_active_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">def</span> <span class="nf">set_interaction_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">active</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>Call with <code>True</code> when the user starts dragging, <code>False</code> when they release. Forwarded to the cube for SLERP smoothing and resets the tick counter for an immediate camera read on state change.</p>
+<h4 id="teardown"><code>teardown</code><a class="headerlink" href="#teardown" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>Stop polling and disconnect all signals. Call this when the OCC view is being destroyed. After teardown, the sync object holds no references to either the view or the cube.</p>
+<h3 id="class-constants">Class constants<a class="headerlink" href="#class-constants" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>_TICK_MS</code></td>
+<td style="text-align: left;"><code>16</code></td>
+<td style="text-align: left;">Base timer interval (ms)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>_INTERACTION_TICKS</code></td>
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">Poll every tick during interaction</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>_IDLE_TICKS</code></td>
+<td style="text-align: left;"><code>4</code></td>
+<td style="text-align: left;">Poll every 4 ticks when idle</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="vtknavcubesync"><code>VTKNavCubeSync</code><a class="headerlink" href="#vtknavcubesync" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">from</span> <span class="nn">navcube.connectors.vtk</span> <span class="kn">import</span> <span class="n">VTKNavCubeSync</span>
+</span></code></pre></div>
+<p>Same idea as <code>OCCNavCubeSync</code>, but for VTK renderers.</p>
+<h3 id="constructor_3">Constructor<a class="headerlink" href="#constructor_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">VTKNavCubeSync</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">navicube</span><span class="p">)</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>renderer</code></td>
+<td style="text-align: left;">VTK renderer</td>
+<td style="text-align: left;">A VTK renderer instance</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>navicube</code></td>
+<td style="text-align: left;"><code>NavCubeOverlay</code></td>
+<td style="text-align: left;">The cube widget to sync</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods_2">Methods<a class="headerlink" href="#methods_2" title="Permanent link">&para;</a></h3>
+<h4 id="set_interaction_active_2"><code>set_interaction_active</code><a class="headerlink" href="#set_interaction_active_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">def</span> <span class="nf">set_interaction_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">active</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>Same behavior as <code>OCCNavCubeSync.set_interaction_active()</code>.</p>
+<h4 id="teardown_1"><code>teardown</code><a class="headerlink" href="#teardown_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>Same behavior as <code>OCCNavCubeSync.teardown()</code>.</p>
+<hr />
+<h2 id="face-and-control-ids">Face and control IDs<a class="headerlink" href="#face-and-control-ids" title="Permanent link">&para;</a></h2>
+<p>These string IDs show up in <code>hovered_id</code>, hit-testing, and internal lookups.</p>
+<h3 id="main-faces-6">Main faces (6)<a class="headerlink" href="#main-faces-6" title="Permanent link">&para;</a></h3>
+<p><code>TOP</code>, <code>FRONT</code>, <code>LEFT</code>, <code>BACK</code>, <code>RIGHT</code>, <code>BOTTOM</code></p>
+<h3 id="edge-faces-12">Edge faces (12)<a class="headerlink" href="#edge-faces-12" title="Permanent link">&para;</a></h3>
+<p><code>FRONT_TOP</code>, <code>FRONT_BOTTOM</code>, <code>REAR_BOTTOM</code>, <code>REAR_TOP</code>, <code>REAR_RIGHT</code>, <code>FRONT_RIGHT</code>, <code>FRONT_LEFT</code>, <code>REAR_LEFT</code>, <code>TOP_LEFT</code>, <code>TOP_RIGHT</code>, <code>BOTTOM_RIGHT</code>, <code>BOTTOM_LEFT</code></p>
+<h3 id="corner-faces-8">Corner faces (8)<a class="headerlink" href="#corner-faces-8" title="Permanent link">&para;</a></h3>
+<p><code>FTR</code> (Front-Top-Right), <code>FTL</code> (Front-Top-Left), <code>FBR</code> (Front-Bottom-Right), <code>FBL</code> (Front-Bottom-Left), <code>RTR</code> (Rear-Top-Right), <code>RTL</code> (Rear-Top-Left), <code>RBR</code> (Rear-Bottom-Right), <code>RBL</code> (Rear-Bottom-Left)</p>
+<h3 id="control-buttons-8">Control buttons (8)<a class="headerlink" href="#control-buttons-8" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ArrowNorth</code></td>
+<td style="text-align: left;"><code>orbit_u</code></td>
+<td style="text-align: left;">Orbit the camera upward</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ArrowSouth</code></td>
+<td style="text-align: left;"><code>orbit_d</code></td>
+<td style="text-align: left;">Orbit the camera downward</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ArrowEast</code></td>
+<td style="text-align: left;"><code>orbit_r</code></td>
+<td style="text-align: left;">Orbit the camera rightward</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ArrowWest</code></td>
+<td style="text-align: left;"><code>orbit_l</code></td>
+<td style="text-align: left;">Orbit the camera leftward</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ArrowLeft</code></td>
+<td style="text-align: left;"><code>roll_ccw</code></td>
+<td style="text-align: left;">Roll the camera counter-clockwise</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ArrowRight</code></td>
+<td style="text-align: left;"><code>roll_cw</code></td>
+<td style="text-align: left;">Roll the camera clockwise</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ViewMenu</code></td>
+<td style="text-align: left;"><code>home</code></td>
+<td style="text-align: left;">Return to home orientation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DotBackside</code></td>
+<td style="text-align: left;"><code>backside</code></td>
+<td style="text-align: left;">Flip 180° to the opposite view</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/nishikantmandal007/navcube" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://pypi.org/project/navcube/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 444.7a20.4 20.4 0 1 1 0-40.7 20.4 20.4 0 1 1 0 40.7M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.6-183.4a20.4 20.4 0 1 1 0 40.8 20.4 20.4 0 1 1 0-40.8"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.instant", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

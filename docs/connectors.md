@@ -1,9 +1,3 @@
----
-layout: default
-title: Connectors
-sort: 4
----
-
 # Connectors
 
 A connector is a small bridge between a specific 3D renderer and `NavCubeOverlay`. It handles camera polling, signal wiring, interaction state management, and teardown — all the plumbing you'd otherwise have to write yourself.

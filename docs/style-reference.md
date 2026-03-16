@@ -1,9 +1,3 @@
----
-layout: default
-title: Style Reference
-sort: 7
----
-
 # Style Reference
 
 Every field in `NavCubeStyle`, with defaults and examples. This is the single place to control how the cube looks and behaves.

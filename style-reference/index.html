@@ -1,0 +1,3668 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A 3D orientation cube widget for PySide6 — renderer-agnostic, drop-in ready">
+      
+      
+      
+        <link rel="canonical" href="https://nishikantmandal007.github.io/navcube/style-reference/">
+      
+      
+        <link rel="prev" href="../connectors/">
+      
+      
+        <link rel="next" href="../coordinate-systems/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Style Reference - NavCube</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#style-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NavCube" class="md-header__button md-logo" aria-label="NavCube" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NavCube
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Style Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nishikantmandal007/navcube" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nishikantmandal007/navcube
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../connectors/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Connectors
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Style Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../coordinate-systems/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Coordinate Systems
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Examples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Changelog
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NavCube" class="md-nav__button md-logo" aria-label="NavCube" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    NavCube
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nishikantmandal007/navcube" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nishikantmandal007/navcube
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connectors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color type
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        size
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        padding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chamfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chamfer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-and-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Animation and Timing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Animation and Timing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#animation_ms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        animation_ms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tick_ms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tick_ms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thresholds
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thresholds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visibility_threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        visibility_threshold
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orbit_step_deg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        orbit_step_deg
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync_epsilon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sync_epsilon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inactive_opacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        inactive_opacity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lighting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lighting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light_direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        light_direction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Theme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theme_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        theme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-theme-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Light Theme Colors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Light Theme Colors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#face_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        face_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        edge_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corner_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        corner_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        text_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_secondary_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_secondary_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_rim_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_rim_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hover_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover_text_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hover_text_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dot_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dot_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadow_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shadow_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dark-theme-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dark Theme Colors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dark Theme Colors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#face_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        face_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        edge_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corner_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        corner_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        text_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_secondary_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_secondary_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_rim_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_rim_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hover_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover_text_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hover_text_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dot_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dot_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadow_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shadow_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Font
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Font">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#font_family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        font_family
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font_fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        font_fallback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font_weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        font_weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_max_width_ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        label_max_width_ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_max_height_ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        label_max_height_ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min_font_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        min_font_size
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Labels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#labels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        labels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show_controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        show_controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_gizmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        show_gizmo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gizmo_x_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gizmo_x_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gizmo_y_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gizmo_y_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gizmo_z_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gizmo_z_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gizmo_font_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gizmo_font_size
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#border-widths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Border Widths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Border Widths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#border_width_main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_width_main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_width_secondary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_width_secondary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_border_width" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_border_width
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shadow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shadow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shadow_offset_x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shadow_offset_x
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadow_offset_y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shadow_offset_y
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-field-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete field reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-dark-blue-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: dark blue theme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-minimal-wireframe-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: minimal wireframe theme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-style-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime style changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coordinate Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color type
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        size
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        padding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chamfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chamfer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-and-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Animation and Timing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Animation and Timing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#animation_ms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        animation_ms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tick_ms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tick_ms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thresholds
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thresholds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visibility_threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        visibility_threshold
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orbit_step_deg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        orbit_step_deg
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync_epsilon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sync_epsilon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inactive_opacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        inactive_opacity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lighting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lighting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light_direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        light_direction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Theme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theme_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        theme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-theme-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Light Theme Colors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Light Theme Colors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#face_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        face_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        edge_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corner_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        corner_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        text_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_secondary_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_secondary_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_rim_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_rim_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hover_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover_text_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hover_text_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dot_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dot_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadow_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shadow_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dark-theme-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dark Theme Colors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dark Theme Colors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#face_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        face_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        edge_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corner_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        corner_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        text_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_secondary_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_secondary_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_rim_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_rim_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hover_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover_text_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hover_text_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dot_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dot_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadow_color_dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shadow_color_dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Font
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Font">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#font_family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        font_family
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font_fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        font_fallback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font_weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        font_weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_max_width_ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        label_max_width_ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_max_height_ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        label_max_height_ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min_font_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        min_font_size
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Labels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#labels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        labels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show_controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        show_controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_gizmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        show_gizmo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gizmo_x_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gizmo_x_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gizmo_y_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gizmo_y_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gizmo_z_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gizmo_z_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gizmo_font_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gizmo_font_size
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#border-widths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Border Widths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Border Widths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#border_width_main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_width_main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_width_secondary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        border_width_secondary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control_border_width" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        control_border_width
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shadow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shadow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shadow_offset_x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shadow_offset_x
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shadow_offset_y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shadow_offset_y
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-field-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete field reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-dark-blue-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: dark blue theme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-minimal-wireframe-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: minimal wireframe theme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-style-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime style changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="style-reference">Style Reference<a class="headerlink" href="#style-reference" title="Permanent link">&para;</a></h1>
+<p>Every field in <code>NavCubeStyle</code>, with defaults and examples. This is the single place to control how the cube looks and behaves.</p>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><code>NavCubeStyle</code> is a Python <code>dataclass</code>. Pass it when creating the cube, or swap it out at runtime:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">navcube</span> <span class="kn">import</span> <span class="n">NavCubeOverlay</span><span class="p">,</span> <span class="n">NavCubeStyle</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># At construction time</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">theme</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">NavCubeOverlay</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">win</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Swap it later</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">new_style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">theme</span><span class="o">=</span><span class="s2">&quot;light&quot;</span><span class="p">,</span> <span class="n">hover_color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">235</span><span class="p">))</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">cube</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">new_style</span><span class="p">)</span>
+</span></code></pre></div>
+<p><code>set_style()</code> does a full rebuild — rebuilds face geometry, clears the font cache, recalculates DPI scaling, and forces a repaint. It's safe to call at any time.</p>
+<h3 id="color-type">Color type<a class="headerlink" href="#color-type" title="Permanent link">&para;</a></h3>
+<p>Colors throughout this reference are RGB or RGBA tuples:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Color</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span>
+</span></code></pre></div>
+<p>RGB values range from 0–255. The optional fourth element is alpha (0 = fully transparent, 255 = fully opaque). Omitting alpha means fully opaque.</p>
+<hr />
+<h2 id="geometry">Geometry<a class="headerlink" href="#geometry" title="Permanent link">&para;</a></h2>
+<p>These fields control the widget's physical dimensions and the 3D projection.</p>
+<h3 id="size"><code>size</code><a class="headerlink" href="#size" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>int</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>120</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Base cube drawing area in pixels before DPI scaling. The actual widget size is <code>size + 2 × padding</code>. At 96 DPI this is used directly; at higher DPI the widget scales proportionally.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">180</span><span class="p">)</span>  <span class="c1"># Large cube for a 4K monitor</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>   <span class="c1"># Compact cube for a sidebar</span>
+</span></code></pre></div>
+<h3 id="padding"><code>padding</code><a class="headerlink" href="#padding" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>int</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Transparent space on each side of the cube drawing area (before DPI scaling). This is what gives the orbit buttons and shadow room to render without clipping. Total widget side length = <code>size + 2 × padding</code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># More room for controls and shadow</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>   <span class="c1"># Tight fit — controls may clip</span>
+</span></code></pre></div>
+<h3 id="scale"><code>scale</code><a class="headerlink" href="#scale" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>float</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>27.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">3D-to-screen projection scale. Controls how large the cube appears within the drawing area. Higher = cube fills more of the widget.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">32.0</span><span class="p">)</span>  <span class="c1"># Bigger cube within the same widget</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">20.0</span><span class="p">)</span>  <span class="c1"># Smaller cube with more margin</span>
+</span></code></pre></div>
+<h3 id="chamfer"><code>chamfer</code><a class="headerlink" href="#chamfer" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>float</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>0.12</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">FreeCAD-style chamfer ratio for edge and corner bevels. Controls how much of each edge is cut away to create the beveled faces. <code>0.0</code> = sharp edges, <code>~0.25</code> = very large bevels. The default matches FreeCAD's NaviCube look.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">chamfer</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>  <span class="c1"># Minimal bevels</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">chamfer</span><span class="o">=</span><span class="mf">0.20</span><span class="p">)</span>  <span class="c1"># Heavily beveled</span>
+</span></code></pre></div>
+<hr />
+<h2 id="animation-and-timing">Animation and Timing<a class="headerlink" href="#animation-and-timing" title="Permanent link">&para;</a></h2>
+<h3 id="animation_ms"><code>animation_ms</code><a class="headerlink" href="#animation_ms" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>int</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>240</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Duration of face-click animations in milliseconds. The camera rotates to the target orientation using quaternion SLERP with a quintic ease-in-out curve.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">animation_ms</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>  <span class="c1"># Snappy</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">animation_ms</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>  <span class="c1"># Cinematic</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">animation_ms</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># Instant (no animation)</span>
+</span></code></pre></div>
+<h3 id="tick_ms"><code>tick_ms</code><a class="headerlink" href="#tick_ms" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>int</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>16</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Internal QTimer tick interval in milliseconds. Default is ~60 FPS. The timer only does real work during active animations — idle ticks return immediately.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">tick_ms</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>   <span class="c1"># Smoother animations, more CPU</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">tick_ms</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span>  <span class="c1"># Lower CPU usage</span>
+</span></code></pre></div>
+<hr />
+<h2 id="thresholds">Thresholds<a class="headerlink" href="#thresholds" title="Permanent link">&para;</a></h2>
+<h3 id="visibility_threshold"><code>visibility_threshold</code><a class="headerlink" href="#visibility_threshold" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>float</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>0.10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Dot-product threshold for back-face culling. A face is visible when <code>dot(face_normal, camera_direction) &lt; threshold</code>. Lower = fewer faces drawn (only front-facing). Higher = more faces shown (including grazing angles).</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">visibility_threshold</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>   <span class="c1"># Only clearly visible faces</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">visibility_threshold</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>  <span class="c1"># Include grazing-angle faces</span>
+</span></code></pre></div>
+<h3 id="orbit_step_deg"><code>orbit_step_deg</code><a class="headerlink" href="#orbit_step_deg" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>float</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>15.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Rotation step in degrees for the orbit arrow buttons. Each click rotates the camera by this amount.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">orbit_step_deg</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>   <span class="c1"># Fine-grained</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">orbit_step_deg</span><span class="o">=</span><span class="mf">45.0</span><span class="p">)</span>  <span class="c1"># Coarse steps</span>
+</span></code></pre></div>
+<h3 id="sync_epsilon"><code>sync_epsilon</code><a class="headerlink" href="#sync_epsilon" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>float</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>1e-3</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Minimum change in camera direction or up vector (Euclidean norm) before triggering a repaint. Prevents unnecessary redraws when <code>push_camera()</code> is called with essentially the same values.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">sync_epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">)</span>  <span class="c1"># More sensitive — redraw on tiny changes</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">sync_epsilon</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">)</span>  <span class="c1"># Less sensitive — ignore small jitter</span>
+</span></code></pre></div>
+<h3 id="inactive_opacity"><code>inactive_opacity</code><a class="headerlink" href="#inactive_opacity" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>float</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>0.72</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Widget opacity when the mouse isn't hovering over it. Ranges from <code>0.0</code> (invisible) to <code>1.0</code> (fully opaque). Jumps to full opacity on mouse enter and during face-click animations.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">inactive_opacity</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>  <span class="c1"># Nearly invisible when idle</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">inactive_opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># Always fully visible</span>
+</span></code></pre></div>
+<hr />
+<h2 id="lighting">Lighting<a class="headerlink" href="#lighting" title="Permanent link">&para;</a></h2>
+<h3 id="light_direction"><code>light_direction</code><a class="headerlink" href="#light_direction" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>Tuple[float, float, float]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>(-0.8, -1.0, -1.8)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Direction vector for the Lambertian shading model. Normalized internally. Faces whose normals point opposite to this direction appear brightest.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">light_direction</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">))</span>   <span class="c1"># Light from top-right</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">light_direction</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">))</span>    <span class="c1"># Flat lighting</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">light_direction</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span>    <span class="c1"># Dramatic side light</span>
+</span></code></pre></div>
+<p>The shading formula: <code>shade = 0.85 + 0.15 × max(0, dot(face_normal, -light_direction))</code>. Faces range from 85% to 100% of their base color.</p>
+<hr />
+<h2 id="theme">Theme<a class="headerlink" href="#theme" title="Permanent link">&para;</a></h2>
+<h3 id="theme_1"><code>theme</code><a class="headerlink" href="#theme_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>str</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>"auto"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Which color palette to use.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>"auto"</code></td>
+<td style="text-align: left;">Reads <code>QApplication.palette()</code>. If the Window color lightness &gt; 128, uses light theme; otherwise dark.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>"light"</code></td>
+<td style="text-align: left;">Forces light colors regardless of system palette.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>"dark"</code></td>
+<td style="text-align: left;">Forces dark colors regardless of system palette.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">)</span>   <span class="c1"># Follow system theme</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>   <span class="c1"># Always dark</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="s2">&quot;light&quot;</span><span class="p">)</span>  <span class="c1"># Always light</span>
+</span></code></pre></div>
+<hr />
+<h2 id="light-theme-colors">Light Theme Colors<a class="headerlink" href="#light-theme-colors" title="Permanent link">&para;</a></h2>
+<p>Used when the resolved theme is "light". All are <code>Color</code> (RGB or RGBA tuple).</p>
+<h3 id="face_color"><code>face_color</code><a class="headerlink" href="#face_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(248, 248, 252)</code> — base fill for the six main faces, subject to Lambertian shading.</p>
+<h3 id="edge_color"><code>edge_color</code><a class="headerlink" href="#edge_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(210, 210, 215)</code> — fill for the 12 edge faces. Slightly darker than <code>face_color</code> for visual depth.</p>
+<h3 id="corner_color"><code>corner_color</code><a class="headerlink" href="#corner_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(185, 185, 190)</code> — fill for the 8 corner faces. Usually the darkest of the three face types.</p>
+<h3 id="text_color"><code>text_color</code><a class="headerlink" href="#text_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(18, 18, 18)</code> — label text color when the face is not hovered.</p>
+<h3 id="border_color"><code>border_color</code><a class="headerlink" href="#border_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(28, 28, 32)</code> — outline color for the six main faces.</p>
+<h3 id="border_secondary_color"><code>border_secondary_color</code><a class="headerlink" href="#border_secondary_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(50, 50, 55)</code> — outline color for edge and corner faces. Lighter to de-emphasize.</p>
+<h3 id="control_color"><code>control_color</code><a class="headerlink" href="#control_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(186, 186, 192, 120)</code> — fill for control buttons (orbit arrows, roll arrows, home, backside dot) when not hovered. Semi-transparent by default.</p>
+<h3 id="control_rim_color"><code>control_rim_color</code><a class="headerlink" href="#control_rim_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(105, 105, 110, 170)</code> — border color for control buttons when not hovered.</p>
+<h3 id="hover_color"><code>hover_color</code><a class="headerlink" href="#hover_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(0, 148, 255, 235)</code> — fill for any element when the mouse is over it. Bright blue with slight transparency.</p>
+<h3 id="hover_text_color"><code>hover_text_color</code><a class="headerlink" href="#hover_text_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(255, 255, 255)</code> — label text color when the face is hovered. White for contrast.</p>
+<h3 id="dot_color"><code>dot_color</code><a class="headerlink" href="#dot_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(195, 195, 198, 225)</code> — color of the center dot on the XYZ gizmo (when <code>show_gizmo=True</code>).</p>
+<h3 id="shadow_color"><code>shadow_color</code><a class="headerlink" href="#shadow_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(0, 0, 0, 42)</code> — drop shadow behind each face. Very subtle black. Set alpha to 0 to disable shadows entirely.</p>
+<hr />
+<h2 id="dark-theme-colors">Dark Theme Colors<a class="headerlink" href="#dark-theme-colors" title="Permanent link">&para;</a></h2>
+<p>Same semantics as the light theme colors, with different defaults tuned for dark backgrounds.</p>
+<h3 id="face_color_dark"><code>face_color_dark</code><a class="headerlink" href="#face_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(155, 160, 178)</code> — medium blue-gray that reads well against dark backgrounds.</p>
+<h3 id="edge_color_dark"><code>edge_color_dark</code><a class="headerlink" href="#edge_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(118, 122, 138)</code></p>
+<h3 id="corner_color_dark"><code>corner_color_dark</code><a class="headerlink" href="#corner_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(96, 99, 113)</code></p>
+<h3 id="text_color_dark"><code>text_color_dark</code><a class="headerlink" href="#text_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(238, 238, 238)</code> — near-white for readability.</p>
+<h3 id="border_color_dark"><code>border_color_dark</code><a class="headerlink" href="#border_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(10, 10, 12)</code> — nearly black.</p>
+<h3 id="border_secondary_color_dark"><code>border_secondary_color_dark</code><a class="headerlink" href="#border_secondary_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(20, 20, 22)</code></p>
+<h3 id="control_color_dark"><code>control_color_dark</code><a class="headerlink" href="#control_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(78, 78, 82, 125)</code></p>
+<h3 id="control_rim_color_dark"><code>control_rim_color_dark</code><a class="headerlink" href="#control_rim_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(42, 42, 46, 175)</code></p>
+<h3 id="hover_color_dark"><code>hover_color_dark</code><a class="headerlink" href="#hover_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(0, 148, 255, 235)</code> — same blue as light theme.</p>
+<h3 id="hover_text_color_dark"><code>hover_text_color_dark</code><a class="headerlink" href="#hover_text_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(255, 255, 255)</code></p>
+<h3 id="dot_color_dark"><code>dot_color_dark</code><a class="headerlink" href="#dot_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(145, 145, 148, 225)</code></p>
+<h3 id="shadow_color_dark"><code>shadow_color_dark</code><a class="headerlink" href="#shadow_color_dark" title="Permanent link">&para;</a></h3>
+<p>Default <code>(0, 0, 0, 78)</code> — stronger than the light theme shadow since dark backgrounds need more contrast.</p>
+<hr />
+<h2 id="font">Font<a class="headerlink" href="#font" title="Permanent link">&para;</a></h2>
+<h3 id="font_family"><code>font_family</code><a class="headerlink" href="#font_family" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>str</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>"Arial"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Primary font family for face labels. Falls back to <code>font_fallback</code> style hint if not available on the system.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;Helvetica Neue&quot;</span><span class="p">)</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;Segoe UI&quot;</span><span class="p">)</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;Noto Sans CJK JP&quot;</span><span class="p">)</span>  <span class="c1"># For Japanese labels</span>
+</span></code></pre></div>
+<h3 id="font_fallback"><code>font_fallback</code><a class="headerlink" href="#font_fallback" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>str</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>"SansSerif"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Qt font style hint used when <code>font_family</code> isn't available. Passed to <code>QFont.setStyleHint()</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Valid values: <code>"SansSerif"</code>, <code>"Serif"</code>, <code>"Monospace"</code>, <code>"TypeWriter"</code>, <code>"Cursive"</code>, <code>"Fantasy"</code>, <code>"System"</code>.</p>
+<h3 id="font_weight"><code>font_weight</code><a class="headerlink" href="#font_weight" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>str</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>"bold"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Font weight for face labels.</td>
+</tr>
+</tbody>
+</table>
+<p>Valid values: <code>"thin"</code>, <code>"extralight"</code>, <code>"light"</code>, <code>"normal"</code>, <code>"medium"</code>, <code>"demibold"</code>, <code>"bold"</code>, <code>"extrabold"</code>, <code>"black"</code>.</p>
+<h3 id="label_max_width_ratio"><code>label_max_width_ratio</code><a class="headerlink" href="#label_max_width_ratio" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>float</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>0.70</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Max fraction of the 200-unit virtual label canvas that text may occupy horizontally. Font size auto-scales to fit.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="label_max_height_ratio"><code>label_max_height_ratio</code><a class="headerlink" href="#label_max_height_ratio" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>float</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>0.45</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Max fraction of the 200-unit virtual label canvas that text may occupy vertically. Works with <code>label_max_width_ratio</code> — the smaller computed size wins.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="min_font_size"><code>min_font_size</code><a class="headerlink" href="#min_font_size" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>float</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>40.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Minimum font point size in the virtual label space. Prevents long labels from becoming unreadably tiny — text may overflow slightly rather than disappear.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h2>
+<h3 id="labels_1"><code>labels</code><a class="headerlink" href="#labels_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>Dict[str, str]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>{"TOP": "TOP", "FRONT": "FRONT", "LEFT": "LEFT", "BACK": "BACK", "RIGHT": "RIGHT", "BOTTOM": "BOTTOM"}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Display text for each main face. Only the six main faces have labels — edges and corners don't. Keys must be exactly: <code>TOP</code>, <code>FRONT</code>, <code>LEFT</code>, <code>BACK</code>, <code>RIGHT</code>, <code>BOTTOM</code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># German labels</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="s2">&quot;TOP&quot;</span><span class="p">:</span> <span class="s2">&quot;OBEN&quot;</span><span class="p">,</span> <span class="s2">&quot;FRONT&quot;</span><span class="p">:</span> <span class="s2">&quot;VORNE&quot;</span><span class="p">,</span> <span class="s2">&quot;LEFT&quot;</span><span class="p">:</span> <span class="s2">&quot;LINKS&quot;</span><span class="p">,</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="s2">&quot;BACK&quot;</span><span class="p">:</span> <span class="s2">&quot;HINTEN&quot;</span><span class="p">,</span> <span class="s2">&quot;RIGHT&quot;</span><span class="p">:</span> <span class="s2">&quot;RECHTS&quot;</span><span class="p">,</span> <span class="s2">&quot;BOTTOM&quot;</span><span class="p">:</span> <span class="s2">&quot;UNTEN&quot;</span><span class="p">,</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">})</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1"># Japanese labels</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    <span class="n">font_family</span><span class="o">=</span><span class="s2">&quot;Noto Sans CJK JP&quot;</span><span class="p">,</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>        <span class="s2">&quot;TOP&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\u4e0a</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;FRONT&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\u524d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;LEFT&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\u5de6</span><span class="s2">&quot;</span><span class="p">,</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>        <span class="s2">&quot;BACK&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\u5f8c</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;RIGHT&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\u53f3</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;BOTTOM&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\u4e0b</span><span class="s2">&quot;</span><span class="p">,</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>    <span class="p">},</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="controls">Controls<a class="headerlink" href="#controls" title="Permanent link">&para;</a></h2>
+<h3 id="show_controls"><code>show_controls</code><a class="headerlink" href="#show_controls" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>bool</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Whether to show the orbit buttons, roll arrows, home button, and backside dot. <code>False</code> hides all controls, leaving just the cube faces.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">show_controls</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Cube faces only</span>
+</span></code></pre></div>
+<p>The control elements:
+- <strong>ArrowNorth / ArrowSouth / ArrowEast / ArrowWest</strong> — orbit buttons, each steps by <code>orbit_step_deg</code>
+- <strong>ArrowLeft / ArrowRight</strong> — roll arrows, rotate around the view axis
+- <strong>ViewMenu</strong> — home button, snaps back to the home orientation
+- <strong>DotBackside</strong> — flips 180° to the opposite view</p>
+<h3 id="show_gizmo"><code>show_gizmo</code><a class="headerlink" href="#show_gizmo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>bool</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Whether to show the XYZ axis gizmo in the lower-left corner. Three colored lines (X=red, Y=green, Z=blue) oriented to match the current camera.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">show_gizmo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="gizmo_x_color"><code>gizmo_x_color</code><a class="headerlink" href="#gizmo_x_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(215, 52, 52)</code> — X-axis line color (red).</p>
+<h3 id="gizmo_y_color"><code>gizmo_y_color</code><a class="headerlink" href="#gizmo_y_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(52, 195, 52)</code> — Y-axis line color (green).</p>
+<h3 id="gizmo_z_color"><code>gizmo_z_color</code><a class="headerlink" href="#gizmo_z_color" title="Permanent link">&para;</a></h3>
+<p>Default <code>(55, 115, 255)</code> — Z-axis line color (blue).</p>
+<h3 id="gizmo_font_size"><code>gizmo_font_size</code><a class="headerlink" href="#gizmo_font_size" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;"><code>int</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default</strong></td>
+<td style="text-align: left;"><code>9</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Font size in points for the X/Y/Z labels on the gizmo.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="border-widths">Border Widths<a class="headerlink" href="#border-widths" title="Permanent link">&para;</a></h2>
+<h3 id="border_width_main"><code>border_width_main</code><a class="headerlink" href="#border_width_main" title="Permanent link">&para;</a></h3>
+<p>Default <code>2.0</code> — pen width in pixels for main face outlines.</p>
+<div class="highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">border_width_main</span><span class="o">=</span><span class="mf">3.5</span><span class="p">)</span>  <span class="c1"># Thick borders</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">border_width_main</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>  <span class="c1"># No borders</span>
+</span></code></pre></div>
+<h3 id="border_width_secondary"><code>border_width_secondary</code><a class="headerlink" href="#border_width_secondary" title="Permanent link">&para;</a></h3>
+<p>Default <code>1.2</code> — pen width for edge and corner face outlines. Thinner than main for visual hierarchy.</p>
+<h3 id="control_border_width"><code>control_border_width</code><a class="headerlink" href="#control_border_width" title="Permanent link">&para;</a></h3>
+<p>Default <code>1.2</code> — pen width for control button borders.</p>
+<hr />
+<h2 id="shadow">Shadow<a class="headerlink" href="#shadow" title="Permanent link">&para;</a></h2>
+<h3 id="shadow_offset_x"><code>shadow_offset_x</code><a class="headerlink" href="#shadow_offset_x" title="Permanent link">&para;</a></h3>
+<p>Default <code>1.8</code> — horizontal shadow offset in pixels. Positive = right.</p>
+<h3 id="shadow_offset_y"><code>shadow_offset_y</code><a class="headerlink" href="#shadow_offset_y" title="Permanent link">&para;</a></h3>
+<p>Default <code>2.3</code> — vertical shadow offset in pixels. Positive = down.</p>
+<div class="highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">shadow_color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>  <span class="c1"># No shadow</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span>  <span class="c1"># Dramatic shadow</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    <span class="n">shadow_offset_x</span><span class="o">=</span><span class="mf">4.0</span><span class="p">,</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    <span class="n">shadow_offset_y</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    <span class="n">shadow_color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="complete-field-reference">Complete field reference<a class="headerlink" href="#complete-field-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>size</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>120</code></td>
+<td style="text-align: left;">Geometry</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>padding</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>10</code></td>
+<td style="text-align: left;">Geometry</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scale</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>27.0</code></td>
+<td style="text-align: left;">Geometry</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>chamfer</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.12</code></td>
+<td style="text-align: left;">Geometry</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>animation_ms</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>240</code></td>
+<td style="text-align: left;">Animation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tick_ms</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>16</code></td>
+<td style="text-align: left;">Animation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>visibility_threshold</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.10</code></td>
+<td style="text-align: left;">Thresholds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>orbit_step_deg</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>15.0</code></td>
+<td style="text-align: left;">Thresholds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sync_epsilon</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>1e-3</code></td>
+<td style="text-align: left;">Thresholds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>inactive_opacity</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.72</code></td>
+<td style="text-align: left;">Thresholds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>light_direction</code></td>
+<td style="text-align: left;"><code>Tuple[float,float,float]</code></td>
+<td style="text-align: left;"><code>(-0.8, -1.0, -1.8)</code></td>
+<td style="text-align: left;">Lighting</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>theme</code></td>
+<td style="text-align: left;"><code>str</code></td>
+<td style="text-align: left;"><code>"auto"</code></td>
+<td style="text-align: left;">Theme</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>face_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(248, 248, 252)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>edge_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(210, 210, 215)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>corner_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(185, 185, 190)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>text_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(18, 18, 18)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>border_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(28, 28, 32)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>border_secondary_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(50, 50, 55)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>control_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(186, 186, 192, 120)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>control_rim_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(105, 105, 110, 170)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hover_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(0, 148, 255, 235)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hover_text_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(255, 255, 255)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dot_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(195, 195, 198, 225)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>shadow_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(0, 0, 0, 42)</code></td>
+<td style="text-align: left;">Light Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>face_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(155, 160, 178)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>edge_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(118, 122, 138)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>corner_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(96, 99, 113)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>text_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(238, 238, 238)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>border_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(10, 10, 12)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>border_secondary_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(20, 20, 22)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>control_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(78, 78, 82, 125)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>control_rim_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(42, 42, 46, 175)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hover_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(0, 148, 255, 235)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hover_text_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(255, 255, 255)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dot_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(145, 145, 148, 225)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>shadow_color_dark</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(0, 0, 0, 78)</code></td>
+<td style="text-align: left;">Dark Colors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>font_family</code></td>
+<td style="text-align: left;"><code>str</code></td>
+<td style="text-align: left;"><code>"Arial"</code></td>
+<td style="text-align: left;">Font</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>font_fallback</code></td>
+<td style="text-align: left;"><code>str</code></td>
+<td style="text-align: left;"><code>"SansSerif"</code></td>
+<td style="text-align: left;">Font</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>font_weight</code></td>
+<td style="text-align: left;"><code>str</code></td>
+<td style="text-align: left;"><code>"bold"</code></td>
+<td style="text-align: left;">Font</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>label_max_width_ratio</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.70</code></td>
+<td style="text-align: left;">Font</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>label_max_height_ratio</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>0.45</code></td>
+<td style="text-align: left;">Font</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>min_font_size</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>40.0</code></td>
+<td style="text-align: left;">Font</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>labels</code></td>
+<td style="text-align: left;"><code>Dict[str, str]</code></td>
+<td style="text-align: left;"><code>{"TOP":"TOP", ...}</code></td>
+<td style="text-align: left;">Labels</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>show_controls</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;"><code>True</code></td>
+<td style="text-align: left;">Controls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>show_gizmo</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;"><code>False</code></td>
+<td style="text-align: left;">Controls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gizmo_x_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(215, 52, 52)</code></td>
+<td style="text-align: left;">Controls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gizmo_y_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(52, 195, 52)</code></td>
+<td style="text-align: left;">Controls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gizmo_z_color</code></td>
+<td style="text-align: left;"><code>Color</code></td>
+<td style="text-align: left;"><code>(55, 115, 255)</code></td>
+<td style="text-align: left;">Controls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gizmo_font_size</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>9</code></td>
+<td style="text-align: left;">Controls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>border_width_main</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>2.0</code></td>
+<td style="text-align: left;">Border Widths</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>border_width_secondary</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>1.2</code></td>
+<td style="text-align: left;">Border Widths</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>control_border_width</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>1.2</code></td>
+<td style="text-align: left;">Border Widths</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>shadow_offset_x</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>1.8</code></td>
+<td style="text-align: left;">Shadow</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>shadow_offset_y</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>2.3</code></td>
+<td style="text-align: left;">Shadow</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="example-dark-blue-theme">Example: dark blue theme<a class="headerlink" href="#example-dark-blue-theme" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    <span class="n">theme</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="p">,</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    <span class="n">face_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">),</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    <span class="n">edge_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    <span class="n">corner_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>    <span class="n">text_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>    <span class="n">border_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>    <span class="n">border_secondary_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>    <span class="n">hover_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">235</span><span class="p">),</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>    <span class="n">hover_text_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>    <span class="n">control_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">120</span><span class="p">),</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>    <span class="n">control_rim_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">170</span><span class="p">),</span>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>    <span class="n">shadow_color_dark</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="example-minimal-wireframe-theme">Example: minimal wireframe theme<a class="headerlink" href="#example-minimal-wireframe-theme" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    <span class="n">theme</span><span class="o">=</span><span class="s2">&quot;light&quot;</span><span class="p">,</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    <span class="n">face_color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    <span class="n">edge_color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    <span class="n">corner_color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    <span class="n">text_color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    <span class="n">border_color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>    <span class="n">border_secondary_color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>    <span class="n">border_width_main</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    <span class="n">border_width_secondary</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    <span class="n">shadow_color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>  <span class="c1"># No shadow</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    <span class="n">hover_color</span><span class="o">=</span><span class="p">(</span><span class="mi">230</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>    <span class="n">hover_text_color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>    <span class="n">show_controls</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>    <span class="n">inactive_opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="runtime-style-changes">Runtime style changes<a class="headerlink" href="#runtime-style-changes" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kn">from</span> <span class="nn">navcube</span> <span class="kn">import</span> <span class="n">NavCubeOverlay</span><span class="p">,</span> <span class="n">NavCubeStyle</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">NavCubeOverlay</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">win</span><span class="p">)</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c1"># Switch to a custom style</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="n">dark_style</span> <span class="o">=</span> <span class="n">NavCubeStyle</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="n">cube</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">dark_style</span><span class="p">)</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="c1"># Reset to defaults</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="n">cube</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">NavCubeStyle</span><span class="p">())</span>
+</span></code></pre></div>
+<p>Internally, <code>set_style()</code> does all of this in one shot:
+1. Stores the new style
+2. Recomputes derived values (scale, light direction, thresholds, etc.)
+3. Clears the font size cache
+4. Rebuilds all face geometry (in case <code>chamfer</code> changed)
+5. Recalculates DPI scaling and widget size
+6. Updates the timer interval
+7. Forces a full repaint</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/nishikantmandal007/navcube" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://pypi.org/project/navcube/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 444.7a20.4 20.4 0 1 1 0-40.7 20.4 20.4 0 1 1 0 40.7M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.6-183.4a20.4 20.4 0 1 1 0 40.8 20.4 20.4 0 1 1 0-40.8"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.instant", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

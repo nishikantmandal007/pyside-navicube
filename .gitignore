@@ -1,6 +1,2 @@
+# MkDocs intermediate build directory (source: docs/  →  output: repo root)
 _site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-Gemfile.lock
-vendor/

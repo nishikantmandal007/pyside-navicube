@@ -1,42 +1,14 @@
----
-layout: default
-title: Home
-sort: 1
----
+<p align="center">
+  <img src="assets/logo.svg" alt="NavCube logo" width="160"/>
+</p>
 
 # NavCube
 
-<p align="center">
-  <img src="{{ '/assets/logo.svg' | relative_url }}" alt="NavCube logo" width="160"/>
-</p>
-
 NavCube is a 3D orientation cube widget for PySide6. Drop it into any 3D viewport — OCC, VTK, custom OpenGL, whatever you're using — and it just works. No renderer dependency, no shared OpenGL context, no lifecycle headaches.
 
-[Get Started]({{ '/getting-started' | relative_url }}){: .btn }
-[View on GitHub](https://github.com/nishikantmandal007/navcube){: .btn }
-[PyPI](https://pypi.org/project/navcube/){: .btn }
-
----
-
-## Live demo
-
-<div class="cad-frame">
-  <div class="cad-bar cad-bar-top">
-    <div class="cad-bar-left">
-      <span class="cad-viewport-badge">&#9635; Perspective</span>
-    </div>
-    <div class="cad-bar-right">
-      <span class="cad-hint-text">Drag to orbit &nbsp;&middot;&nbsp; Click NaviCube face to snap</span>
-    </div>
-  </div>
-  <div id="demo-canvas" style="width:100%;height:460px;display:block;"></div>
-  <div class="cad-bar cad-bar-bottom">
-    <span id="demo-status-left" class="cad-status-left">ISO view &nbsp;&middot;&nbsp; Z-up</span>
-    <span class="cad-status-right">NavCube &mdash; OCC-style viewport &nbsp;&middot;&nbsp; PySide6 + QPainter</span>
-  </div>
-</div>
-
-<script src="{{ '/assets/js/demo.js' | relative_url }}"></script>
+[Get Started](getting-started.md){ .md-button .md-button--primary }
+[View on GitHub](https://github.com/nishikantmandal007/navcube){ .md-button }
+[PyPI](https://pypi.org/project/navcube/){ .md-button }
 
 ---
 
@@ -72,7 +44,7 @@ That's the entire integration surface. The widget has no idea what's rendering b
 | **Full style control** | 60+ fields in `NavCubeStyle` covering colors, fonts, labels, animation speed, and opacity. You can change everything at runtime. |
 | **Smooth animations** | Quaternion SLERP with antipodal handling. No gimbal lock, no NaN crashes on 180° flips. |
 | **Z-up and Y-up** | Z-up out of the box (OCC, FreeCAD, Blender). One-line subclass to switch to Y-up (Unity, Three.js). |
-| **DPI-aware** | Scales correctly from 96 DPI all the way to 4K Retina. Recalculates automatically when you move between monitors. |
+| **Physical-size DPI** | Uses `physicalDotsPerInch` + `devicePixelRatio` to target a consistent physical size (mm) on every display at every OS scale factor — 100 %, 150 %, 200 %, 4K Retina. Recalculates automatically when you move between monitors. |
 
 ---
 
@@ -115,8 +87,6 @@ cube.viewOrientationRequested.connect(
 )
 cube.show()
 
-# NavCubeOverlay is a Qt.Tool floating window — position with global
-# screen coordinates using mapToGlobal, not parent-relative coordinates.
 def place_cube():
     pos = win.mapToGlobal(QPoint(win.width() - cube.width() - 10, 10))
     cube.move(pos)
@@ -149,30 +119,15 @@ cube.push_camera(dx, dy, dz, ux, uy, uz)
 
 ---
 
-## Documentation
-
-| | |
-|:--|:--|
-| [Getting Started]({{ '/getting-started' | relative_url }}) | Install, understand the architecture, write your first integration |
-| [Style Reference]({{ '/style-reference' | relative_url }}) | Every field in `NavCubeStyle`, with examples |
-| [Coordinate Systems]({{ '/coordinate-systems' | relative_url }}) | Z-up vs Y-up, `_WORLD_ROT`, sign conventions |
-| [Connectors]({{ '/connectors' | relative_url }}) | OCC, VTK, and how to write your own |
-| [API Reference]({{ '/api-reference' | relative_url }}) | Classes, methods, and signals |
-| [Changelog]({{ '/changelog' | relative_url }}) | What changed and when |
-
----
-
-## Acknowledgements
-
-NavCube is directly inspired by [FreeCAD's NaviCube](https://wiki.freecad.org/Navigation_Cube) — one of the best orientation controls in any open-source CAD application. If you haven't tried FreeCAD, you should.
-
-The FreeCAD team's work on their NaviCube shaped nearly every design decision here: the face layout, the corner and edge hit regions, the click-to-snap behaviour, and the overall feel. NavCube exists because their implementation set such a high bar. Huge thanks to the entire FreeCAD community for building and maintaining it.
-
----
-
 ## Sign convention quick reference
 
 | | |
 |:--|:--|
 | `push_camera` dx/dy/dz | **Inward** (eye → scene) — same as OCC `cam.Direction()` |
 | `viewOrientationRequested` px/py/pz | **Outward** (scene → eye) — ready for OCC `SetProj()` |
+
+---
+
+## Acknowledgements
+
+NavCube is directly inspired by [FreeCAD's NaviCube](https://wiki.freecad.org/Navigation_Cube) — one of the best orientation controls in any open-source CAD application. The face layout, corner and edge hit regions, click-to-snap behaviour, and overall feel all follow FreeCAD's lead. Huge thanks to the FreeCAD team for setting such a high bar.

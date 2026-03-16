@@ -1,12 +1,24 @@
----
-layout: default
-title: Changelog
-sort: 8
----
-
 # Changelog
 
 All notable changes to NavCube are documented here. This project follows [Semantic Versioning](https://semver.org/).
+
+---
+
+## v1.0.1
+
+**DPI and adaptive sizing fix.**
+
+### Fixed
+
+- **NavCube size now stable across all display scale factors.**
+  The previous implementation used `logicalDotsPerInch() / 96` as a *multiplier*, causing Qt 6's automatic HiDPI scaling to double-scale the widget — at 150 % Windows zoom the cube appeared ~2.25× larger than intended.
+  The new formula uses `physicalDotsPerInch()` and `devicePixelRatio()` to target a consistent physical size (≈ 26.5 mm) on every display at every OS scale factor: 100 %, 125 %, 150 %, 200 %, 4K, and Retina.
+
+### Added
+
+- `NavCubeStyle.size_fraction` — when > 0, sizes the cube as a percentage of the parent widget's shorter side with automatic parent-resize tracking via an event filter.
+- `NavCubeStyle.size_min` / `size_max` — clamp bounds (in 96-dpi-equivalent pixels) used with `size_fraction`.
+- `NavCubeOverlay` now installs a parent event filter when `size_fraction > 0`, so the cube resizes synchronously before the host's `resizeEvent` handler repositions it — no layout jitter.
 
 ---
 

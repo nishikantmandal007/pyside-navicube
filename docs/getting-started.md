@@ -1,9 +1,3 @@
----
-layout: default
-title: Getting Started
-sort: 2
----
-
 # Getting Started
 
 This guide walks you through installing NavCube, understanding how it's put together, and wiring it up to your renderer for the first time.

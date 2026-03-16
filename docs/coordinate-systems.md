@@ -1,9 +1,3 @@
----
-layout: default
-title: Coordinate Systems
-sort: 5
----
-
 # Coordinate Systems
 
 NavCube needs to know which way "up" is in your 3D world. This page explains how that works and how to configure it for your engine.

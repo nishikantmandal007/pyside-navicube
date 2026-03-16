@@ -1,9 +1,3 @@
----
-layout: default
-title: Examples
-sort: 3
----
-
 # Examples
 
 Ready-to-run code for the most common scenarios. Copy, paste, and adapt.
