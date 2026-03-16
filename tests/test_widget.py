@@ -148,7 +148,7 @@ def test_default_style_creates_widget(qapp):
     """NavCubeOverlay() with no style argument works and uses defaults."""
     cube = NavCubeOverlay(overlay=False)
     assert cube is not None
-    assert cube._style.size == 120  # default size
+    assert cube._style.size == 100  # default size
     assert cube._style.theme == "auto"
     cube.close()
 
@@ -164,7 +164,7 @@ def test_custom_style_accepted(qapp):
 def test_set_style_runtime(qapp):
     """Calling set_style() at runtime replaces the active style."""
     cube = NavCubeOverlay(overlay=False)
-    assert cube._style.size == 120
+    assert cube._style.size == 100
     new_style = NavCubeStyle(size=300, padding=20)
     cube.set_style(new_style)
     assert cube._style.size == 300
